@@ -1,0 +1,11 @@
+# To install all dependencies in one go-
+# pip install -r requirements.txt
+
+
+# FastAPI  library
+fastapi~=0.119.1
+# ASGI server
+uvicorn[standard]~=0.30.0
+# Production grade ASGI server
+granian~=2.5.5
+
