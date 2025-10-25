@@ -1,24 +1,15 @@
 import logging
 from logging.config import dictConfig
-from logging.handlers import RotatingFileHandler
-import sys
 import asyncio
 from concurrent.futures import ThreadPoolExecutor
+from typing import Any, Dict, Literal, Optional
 
-# ============================================================
-# 🧠 WHY THIS EXISTS:
-# Standard Python logging is synchronous (blocking I/O).
-# In async apps (like FastAPI running on Granian or Uvicorn),
-# blocking calls (e.g., writing to file or console) can pause
-# the event loop and reduce throughput.
-# So we offload logging writes to a thread executor asynchronously.
-# ============================================================
 
 
 # -------------------------
 # 1️⃣ Define Base Config
 # -------------------------
-LOGGING_CONFIG = {
+LOGGING_CONFIG: Dict[str, Any] = {
     "version": 1,
     "disable_existing_loggers": False,
 
@@ -37,7 +28,7 @@ LOGGING_CONFIG = {
         "console": {
             "class": "logging.StreamHandler",
             "formatter": "default",
-            "stream": "ext://sys.stdout",  # ensures logs go to stdout (important for Docker/Kubernetes)
+            "stream": "ext://sys.stdout",
         },
         "file": {
             "class": "logging.handlers.RotatingFileHandler",
@@ -50,16 +41,11 @@ LOGGING_CONFIG = {
     },
 
     "loggers": {
-        # Integrate with uvicorn/granian internals (so all logs stay unified)
         "uvicorn": {"handlers": ["console"], "level": "INFO"},
         "uvicorn.error": {"handlers": ["console"], "level": "INFO", "propagate": True},
         "uvicorn.access": {"handlers": ["console"], "level": "INFO", "propagate": False},
         "granian": {"handlers": ["console"], "level": "INFO", "propagate": True},
-
-        # FastAPI internal logs
         "fastapi": {"handlers": ["console"], "level": "INFO", "propagate": False},
-
-        # Your application-specific logger
         "app": {"handlers": ["console", "file"], "level": "DEBUG", "propagate": False},
     },
 }
@@ -69,25 +55,35 @@ LOGGING_CONFIG = {
 # 2️⃣ Apply Config
 # -------------------------
 dictConfig(LOGGING_CONFIG)
-logger = logging.getLogger("app")
+logger: logging.Logger = logging.getLogger("app")
 
 
 # -------------------------
 # 3️⃣ Async Logging Adapter
 # -------------------------
-# This lets you safely log inside async functions without blocking.
+_executor: ThreadPoolExecutor = ThreadPoolExecutor(max_workers=2)
 
-_executor = ThreadPoolExecutor(max_workers=2)
+# Define allowable logging levels for static type checking
+LogLevel = Literal["debug", "info", "warning", "error", "critical"]
 
-async def async_log(level: str, message: str):
+
+async def async_log(level: LogLevel, message: str) -> None:
     """
-    Asynchronous non-blocking logger.
-    Offloads I/O to a background thread so the event loop isn't blocked.
+    Asynchronous, non-blocking logger.
+    Safely logs messages from async functions by offloading
+    I/O operations to a thread pool executor.
+
+    Args:
+        level (LogLevel): Logging level, e.g., 'info', 'error'.
+        message (str): The message to log.
+
+    Raises:
+        ValueError: If an invalid log level is provided.
     """
     loop = asyncio.get_event_loop()
-    func = getattr(logger, level.lower(), None)
+    func: Optional[Any] = getattr(logger, level.lower(), None)
 
-    if func is None:
+    if func is None or not callable(func):
         raise ValueError(f"Invalid log level: {level}")
 
     await loop.run_in_executor(_executor, func, message)

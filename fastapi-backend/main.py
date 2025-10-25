@@ -21,8 +21,7 @@ async def root():
             "server_status":"Server is running smoothly"}
     
     
-    
-    
+
     
     
     
