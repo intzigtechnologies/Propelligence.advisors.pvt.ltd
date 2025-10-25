@@ -47,3 +47,46 @@
 [2025-10-25 16:09:13] [INFO] [app:58] Route visited: '/' | Method: GET | IP: 127.0.0.1
 [2025-10-25 16:09:13] [INFO] [app:58] Response status for '/' | Status Code: 200
 [2025-10-25 16:12:52] [INFO] [app:58] 🛑 FastAPI app shutting down
+[2025-10-25 17:46:54] [INFO] [app:58] 🚀 FastAPI app started successfully
+[2025-10-25 17:46:57] [INFO] [app:58] Route visited: '/' | Method: GET | IP: 127.0.0.1
+[2025-10-25 17:46:57] [INFO] [app:58] Response status for '/' | Status Code: 200
+[2025-10-25 17:47:51] [INFO] [app:58] 🛑 FastAPI app shutting down
+[2025-10-25 17:47:52] [INFO] [app:58] 🚀 FastAPI app started successfully
+[2025-10-25 17:47:54] [INFO] [app:58] Route visited: '/' | Method: GET | IP: 127.0.0.1
+[2025-10-25 17:47:54] [INFO] [app:58] Response status for '/' | Status Code: 200
+[2025-10-25 17:48:00] [INFO] [app:58] Route visited: '/' | Method: GET | IP: 127.0.0.1
+[2025-10-25 17:48:00] [INFO] [app:58] Response status for '/' | Status Code: 200
+[2025-10-25 17:48:00] [INFO] [app:58] Route visited: '/' | Method: GET | IP: 127.0.0.1
+[2025-10-25 17:48:00] [INFO] [app:58] Response status for '/' | Status Code: 200
+[2025-10-25 17:48:00] [INFO] [app:58] Route visited: '/' | Method: GET | IP: 127.0.0.1
+[2025-10-25 17:48:00] [INFO] [app:58] Response status for '/' | Status Code: 200
+[2025-10-25 17:48:01] [INFO] [app:58] Route visited: '/' | Method: GET | IP: 127.0.0.1
+[2025-10-25 17:48:01] [INFO] [app:58] Response status for '/' | Status Code: 200
+[2025-10-25 17:48:01] [INFO] [app:58] Route visited: '/' | Method: GET | IP: 127.0.0.1
+[2025-10-25 17:48:01] [INFO] [app:58] Response status for '/' | Status Code: 200
+[2025-10-25 17:48:01] [INFO] [app:58] Route visited: '/' | Method: GET | IP: 127.0.0.1
+[2025-10-25 17:48:01] [INFO] [app:58] Response status for '/' | Status Code: 200
+[2025-10-25 17:48:01] [INFO] [app:58] Route visited: '/' | Method: GET | IP: 127.0.0.1
+[2025-10-25 17:48:01] [INFO] [app:58] Response status for '/' | Status Code: 200
+[2025-10-25 17:48:01] [INFO] [app:58] Route visited: '/' | Method: GET | IP: 127.0.0.1
+[2025-10-25 17:48:01] [INFO] [app:58] Response status for '/' | Status Code: 200
+[2025-10-25 17:48:02] [INFO] [app:58] Route visited: '/' | Method: GET | IP: 127.0.0.1
+[2025-10-25 17:48:02] [INFO] [app:58] Response status for '/' | Status Code: 200
+[2025-10-25 17:48:02] [INFO] [app:58] Route visited: '/' | Method: GET | IP: 127.0.0.1
+[2025-10-25 17:48:02] [INFO] [app:58] Response status for '/' | Status Code: 200
+[2025-10-25 17:48:02] [INFO] [app:58] Route visited: '/' | Method: GET | IP: 127.0.0.1
+[2025-10-25 17:48:02] [INFO] [app:58] Response status for '/' | Status Code: 200
+[2025-10-25 17:48:02] [INFO] [app:58] Route visited: '/' | Method: GET | IP: 127.0.0.1
+[2025-10-25 17:48:02] [INFO] [app:58] Response status for '/' | Status Code: 200
+[2025-10-25 17:48:02] [INFO] [app:58] Route visited: '/' | Method: GET | IP: 127.0.0.1
+[2025-10-25 17:48:02] [INFO] [app:58] Response status for '/' | Status Code: 200
+[2025-10-25 17:48:03] [INFO] [app:58] Route visited: '/' | Method: GET | IP: 127.0.0.1
+[2025-10-25 17:48:03] [INFO] [app:58] Response status for '/' | Status Code: 200
+[2025-10-25 17:48:03] [INFO] [app:58] Route visited: '/' | Method: GET | IP: 127.0.0.1
+[2025-10-25 17:48:03] [INFO] [app:58] Response status for '/' | Status Code: 200
+[2025-10-25 17:48:03] [INFO] [app:58] Route visited: '/' | Method: GET | IP: 127.0.0.1
+[2025-10-25 17:48:03] [INFO] [app:58] Response status for '/' | Status Code: 200
+[2025-10-25 17:48:03] [INFO] [app:58] Route visited: '/' | Method: GET | IP: 127.0.0.1
+[2025-10-25 17:48:03] [INFO] [app:58] Response status for '/' | Status Code: 200
+[2025-10-25 17:48:03] [INFO] [app:58] Route visited: '/' | Method: GET | IP: 127.0.0.1
+[2025-10-25 17:48:03] [INFO] [app:58] Response status for '/' | Status Code: 200

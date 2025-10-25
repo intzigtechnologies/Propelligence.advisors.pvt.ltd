@@ -12,7 +12,7 @@ class LogRequestsMiddleware(BaseHTTPMiddleware):
         request: Request,
         call_next: Callable[[Request], Awaitable[Response]]
     ) -> Response:
-        # Handle case where client info is unavailable
+        #if host ip is available then that else unknow client
         client_host = request.client.host if request.client else "unknown client"
 
         # Log incoming request

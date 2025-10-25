@@ -1,2 +1,34 @@
 @import "tailwindcss";
 
+/* globals.css */
+:root {
+  --font-oswald: 'Oswald', sans-serif;
+
+  /* Responsive font sizes using clamp(min, preferred, max) */
+  --font-size-h1: clamp(2rem, 5vw, 2.5rem);   /* scales between 32px and 40px */
+  --font-size-h2: clamp(1.5rem, 4vw, 2rem);    /* scales between 24px and 32px */
+  --font-size-h3: clamp(1.25rem, 3.5vw, 1.75rem); /* scales between 20px and 28px */
+  --font-size-h4: clamp(1.125rem, 3vw, 1.5rem);   /* scales between 18px and 24px */
+  --font-size-h5: clamp(1rem, 2.5vw, 1.25rem);    /* scales between 16px and 20px */
+  --font-size-h6: clamp(0.875rem, 2vw, 1rem);     /* scales between 14px and 16px */
+  --font-size-p: clamp(0.875rem, 2vw, 1rem);      /* scales between 14px and 16px */
+  --font-size-a: clamp(0.875rem, 2vw, 1rem);      /* scales between 14px and 16px */
+}
+
+body {
+  font-family: var(--font-oswald);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Apply default font sizes */
+h1 { font-size: var(--font-size-h1); }
+h2 { font-size: var(--font-size-h2); }
+h3 { font-size: var(--font-size-h3); }
+h4 { font-size: var(--font-size-h4); }
+h5 { font-size: var(--font-size-h5); }
+h6 { font-size: var(--font-size-h6); }
+p  { font-size: var(--font-size-p); }
+a  { font-size: var(--font-size-a); }
+
+/* Any class or inline style will override these defaults */
