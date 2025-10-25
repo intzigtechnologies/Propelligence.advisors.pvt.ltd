@@ -1,6 +1,21 @@
+#development grade uvicorn
+#uvicorn main:app --reload
+
+#production grade uvicorn
+#uvicorn main:app
+
+    
+#development grade granian
+#granian --interface asgi main:app --reload
+
+#production grade granian
+#workers = number_of_cpu_cores * 2 + 1
+#granian --interface asgi main:app --workers 13 --threads 2
+
 # To install all dependencies in one go-
 # pip install -r requirements.txt
 
+# Requirements
 
 # FastAPI  library
 fastapi~=0.119.1
