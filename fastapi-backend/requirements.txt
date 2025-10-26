@@ -23,4 +23,5 @@ fastapi~=0.119.1
 uvicorn[standard]~=0.30.0
 # Production grade ASGI server
 granian~=2.5.5
-
+# rich logging library
+rich~=14.2.0

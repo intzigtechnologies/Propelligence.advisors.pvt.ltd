@@ -90,3 +90,5 @@
 [2025-10-25 17:48:03] [INFO] [app:58] Response status for '/' | Status Code: 200
 [2025-10-25 17:48:03] [INFO] [app:58] Route visited: '/' | Method: GET | IP: 127.0.0.1
 [2025-10-25 17:48:03] [INFO] [app:58] Response status for '/' | Status Code: 200
+[2025-10-26 22:42:22] [INFO] [app:73] 🚀 FastAPI app started successfully
+[2025-10-26 22:43:24] [INFO] [app:73] 🛑 FastAPI app shutting down
